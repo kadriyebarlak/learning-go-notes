@@ -1,2 +1,42 @@
 # learning-go-notes
 Notes and exercises while learning Go
+
+You want to do some more low-level stuff. but you do not want to go straight  to C or you've been deailng in C in a long time, and you want your life to be easier.
+Efficient and easy to use like Phyton and Java.
+
+# Advantages of Go
+1. Code runs fast
+2. Garbage collection
+They do not have garbage collection.
+
+3. Simpler objects
+Go is essentially object oriented, some might disagree, it has this concept of objects. These objects are a little simplified as compared to others. It makes it easier, simpler and faster to code.
+It has a simplier object-oriented implementation than like C++.
+
+4. Concurrency is efficient.
+There are a lot of concurrency primitives that are built into the language that are efficiently implemented.
+
+# Software Translation
+1. Machine language: CPU instructions represented in binary. That is the lowest language and it's directly executed on the CPU, on the processor. Very straighforward and simple like add, multiply. Very small steps.
+
+2. Assembly language: CPU instructions with English mnemonics. Basically machine learning almost(very close) a one-to-one mapping to machine language. Easier to read. You can read it. Equivalent to machine language. binary 1110000 = ADD
+
+3. High-level languages: Commonly used languages(C, C++, Pyhton, Go, Java). Much easier to use. They provide you lots of abstractions. for instance variables. Assembly and machine languages do not have variables, they have memory and you can put stuff in it, take stuff out.
+
+All software must be translated into the machine language of processor to be executed. i7,x86 processor does not know C, Java. All it knows is its own machine language. So in order for the code to execute on the processor, it has to be first translated into the machine language of the processor.
+
+# Compiled vs Interpreted (Software Translation step)
+Compilation: Translate instructions once before running the code. C, C++, Go, Java(partially). There is a compiler. You write the source code and you compile it. You execute the compiled executable. The compiled executable is basically machine language code and other stuff. The key thing is Translation occurs only once, saves time.
+Interpretation: Translate instructions while code is executed. Pyhton, Java(partially). Java is compiled but it generates byte code not actual machine code. Then the byte code has to be interpreted at runtime. There is an interpreter also in JVM. Translation occurs every execution on the fly. Requires an interpreter.
+
+# Efficiency vs Ease-of-use
+1. Compiled code is fast
+2. Interpreters make coding easier. I do not have to declare my variable types. Manage memory automatically. when you are done using an object, you want to de-allocate it from memory. The interpreter handles that.
+3. Go is a good compromise. It is compiled language but it has some of the good features of interpreted language. Specifically it has Garbage Collection.
+
+# Garbage Collection
+Automatic memory management. Where should memory be allocated? Where should I put it in memory? What type of memory I should put it in? When can memory be deallocated?
+Manual memory management is hard.
+Go includes GC. Go has a GC code package included. When it compiles your code, it also compiles GC into your code automatically. This is typically only done by interpreter.
+
+
