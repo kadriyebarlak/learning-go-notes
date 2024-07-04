@@ -1,7 +1,7 @@
 # Objects
 
 - Go language is weakly object-oriented.
-- Object-oriented programming really for for code organization. You organize your code by encapsulating your code.
+- Object-oriented programming really good for code organization. You organize your code by encapsulating your code.
 - You group together data and functions which are related.
 - Create a user-defined type which is specific to an application.
     Ex: ints have data(number of value) and functions(addition). Object-oriented programming is the same idea. You are creating types. specific to applications.
@@ -25,21 +25,21 @@
 - Performance Limits: Cocurrency comes from the need for speed. A lot of the motivation not all.
 - Moore's Law used to help performance. Number of transistors on a chip doubles every 18 months. It is not the case anymore recently. 
 - More transistors used to lead to higher clock frequencies. The transistors got a little smaller and they would be closer to each other, you could increase the clock rate. zero to one, zero to one. 
-- Power consumption/temperature constraints limit clock frequencies now. Moore's Law had to slow down. When you pack thesse transistors onto a chip, they generate heat. Every time they switch they consume power which generates heat. More frequently higher rate and more heat. The chip would physically melt. They got ans blowing over the chip. It distributes the heat.
+- Power consumption/temperature constraints limit clock frequencies now. Moore's Law had to slow down. When you pack these transistors onto a chip, they generate heat. Every time they switch they consume power which generates heat. More frequently higher rate and more heat. The chip would physically melt. They got fans blowing over the chip. It distributes the heat.
 - How do you get performance improvement?
 ## Parallelism 
 - Number of cores still increases over time. Quad core four copies of the core. GPU have 1.000 processor core
 - You can perform multiple tasks at the same time on different cores. If you have got 4 cores you, you can do 4 things at once.
 - Difficulties at parallelism. When do tasks start/stop? What if one task needs data from another task? Do tasks conflict in memory variblae A and ovveride variable B in other task.
-## concurrent Programming
+## Concurrent Programming
 - **Concurrency** is the management of multiple tasks at the same time. They might not actually be executing at the same time, maybe they are executing on a single core processor. They are alive at the same time. They could be executing at the same time if you had the resource. They need to be going on at the same time. Maybe one is paused while the others running but they are all alive at the same time at least from the user's perspective.
 - Key requirement for large systems.
-- Concurrent programming enables parallelism. Multiple tasks can be alive and communicating the same time then if you have the resources, multiple cores, multiple memory, then you can map them onto those parallel resources and get parallelism. The program is making decisions that allow things to run in parallel. Management of task execution. Communication between tasks. Synchronization between tasks. There are times where one task has to do something for the next task can start.
+- Concurrent programming enables parallelism. Multiple tasks can be alive and communicating at the same time then if you have the resources, multiple cores, multiple memory, then you can map them onto those parallel resources and get parallelism. The program is making decisions that allow things to run in parallel. Management of task execution. Communication between tasks. Synchronization between tasks. There are times where one task has to do something for the next task can start.
 ## Concurrency in Go
 - Go includes concurrency primitives built-in to the language
 - **Goroutines** represent concurrent tasks, basically a thread.
 - **Channels** are used to communicate between tasks.
-- **select** enables task synchronization
+- **Select** enables task synchronization
 - Concurrency primitives are efficient and easy to use.
 
 # Workspaces and Packages
@@ -52,7 +52,7 @@
 - main() is where code execution starts.
 
 # Go Tool
-- Import: When yo do an import, the Go Tool when it does a build, it has to find the imported packages. I searches through the directories specified by GOROOT and GOPATH environment variable. If you keep everything inside GOROOT and GOPATH, so inside your workspace, it will find them. If you decide you want to import some packege from some other place, maybe in a different directory, you have to change your GOROOT and GOPATH paths.  
+- Import: When yo do an import, the Go Tool when it does a build, it has to find the imported packages. It searches through the directories specified by GOROOT and GOPATH environment variable. If you keep everything inside GOROOT and GOPATH, so inside your workspace, it will find them. If you decide you want to import some packege from some other place, maybe in a different directory, you have to change your GOROOT and GOPATH paths.  
 - Go Tool: When you download Go, you get this Go Tool. A tool to manage Go source code. Several commands.
 - **go build** - compiles the program. Arguments can be a list of packages or .go files. Creates an executable for the main package, same name as the first .go file. .exe suffix for executable in Windows
 - **go doc**  - prints documentation for a package.
