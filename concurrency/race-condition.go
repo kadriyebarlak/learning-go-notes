@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"sync/atomic"
 )
 
 //race condition:
@@ -10,7 +11,31 @@ import (
 //and at least one of them modifies the data, leading to unexpected behavior
 func main() {
 	//raceExample()
-	raceExampleFixed()
+	//raceExampleFixed()
+	raceExampleFixedWithAtomic()
+}
+
+func raceExampleFixedWithAtomic() {
+	wg := sync.WaitGroup{}
+	wg.Add(2)
+
+	var val int32 = 0
+
+	go func() {
+		for i := 0; i < 100000000; i++ {
+			atomic.AddInt32(&val, 1)
+		}
+		wg.Done()
+	}()
+
+	go func() {
+		for i := 0; i < 100000000; i++ {
+			atomic.AddInt32(&val, 1)
+		}
+		wg.Done()
+	}()
+	wg.Wait()
+	fmt.Println(val)
 }
 
 func raceExampleFixed() {
