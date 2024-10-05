@@ -1,0 +1,25 @@
+goos: darwin
+goarch: amd64
+pkg: learning/go-test/benchmark
+cpu: Intel(R) Core(TM) i7-1068NG7 CPU @ 2.30GHz
+BenchmarkGzipWithoutPoll-8   	   11128	    110366 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    121403 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    123775 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	    9943	    112112 ns/op	  814176 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    111570 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    130759 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    120003 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    138073 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	   10000	    166710 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithoutPoll-8   	    9388	    126888 ns/op	  814177 B/op	      21 allocs/op
+BenchmarkGzipWithPoll-8      	  679995	      1833 ns/op	      59 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  678518	      1838 ns/op	      60 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  660410	      1783 ns/op	      58 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  668980	      1766 ns/op	      58 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  672048	      1762 ns/op	      58 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  676718	      1754 ns/op	      58 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  686444	      1751 ns/op	      60 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  667340	      1765 ns/op	      58 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  683718	      1757 ns/op	      58 B/op	       1 allocs/op
+BenchmarkGzipWithPoll-8      	  688105	      1807 ns/op	      58 B/op	       1 allocs/op
+PASS
